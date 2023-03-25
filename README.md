@@ -1,4 +1,4 @@
-![imagem](.img/img.jpg)
+![imagem](.img/terraform-libvirt.jpg)
 # terraform-libvirt
 Repo para criação de laboratórios terraform usando KVM. A ideia deste repo é testar varios ambientes, por hora, há apenas 2 ambientes (almalinux e ubuntu). acompanhe o repo para mais atualizações.
 
