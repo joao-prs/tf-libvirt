@@ -1,7 +1,3 @@
-# para mais informações sobre paramater, verifique isso
-# https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/website/docs/r/cloudinit.html.markdown
-# Use o Cloud Init para adicionar sua chave ssh à instância,
-# você também pode adicionar o campo de metadados
 resource "libvirt_cloudinit_disk" "commoninit" {
   name           = "commoninit.iso"
   user_data      = data.template_file.user_data.rendered
@@ -21,9 +17,6 @@ resource "libvirt_domain" "domain-almalinux" {
     network_name = "default"
   }
 
-  # IMPORTANTE: este é um bug conhecido nas imagens de nuvem, pois eles 
-  # esperam um console que precisamos passar
-  # https://bugs.launchpad.net/cloud-images/+bug/1573095
   console {
     type        = "pty"
     target_port = "0"
